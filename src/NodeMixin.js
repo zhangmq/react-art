@@ -1,3 +1,4 @@
+var Transform = require('art/core/transform')
 var EventTypes = require('./EventTypes');
 
 // Various nodes that can go into a surface

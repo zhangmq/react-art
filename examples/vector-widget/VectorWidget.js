@@ -21,6 +21,12 @@ var MAX_VEL = 11;
 var CLICK_ACCEL = 3;
 var BASE_VEL = 0.15;
 
+var makeListener = function(f) {
+  return {
+    handleEvent: f
+  };
+};
+
 /**
  * An animated SVG component.
  */
@@ -90,8 +96,8 @@ var VectorWidget = React.createClass({
 
     return (
       <Group
-        onMouseDown={this.handleMouseDown}
-        onMouseUp={this.handleMouseUp}>
+        onMouseDown={makeListener(this.handleMouseDown)}
+        onMouseUp={makeListener(this.handleMouseUp)}>
         <Group x={210} y={135}>
           <Shape fill="rgba(0,0,0,0.1)" d={BORDER_PATH} />
           <Shape fill="#7BC7BA" d={BG_PATH} />
@@ -129,4 +135,3 @@ var RING_TWO_ROTATE = new Transform().translate(84.000000, 89.000000).rotate(-24
 var RING_THREE_ROTATE = new Transform().translate(84.000000, 89.000000).rotate(-300.000000).translate(-84.000000, -89.000000);
 
 module.exports = VectorWidget;
-
