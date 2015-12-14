@@ -29,6 +29,21 @@ var RenderableMixin = assign({}, NodeMixin, {
         props.strokeDash
       );
     }
+
+    if (
+        oldProps.shadow !== props.shadow ||
+        oldProps.shadowOffsetX !== props.shadowOffsetX ||
+        oldProps.shadowOffsetY !== props.shadowOffsetY ||
+        oldProps.shadowBlur !== props.shadowBlur
+    ) {
+        this.node.shadow(
+            props.shadow,
+            props.shadowBlur,
+            props.shadowOffsetX,
+            props.shadowOffsetY
+        );
+    }
+
     this.applyNodeProps(oldProps, props);
   },
 
