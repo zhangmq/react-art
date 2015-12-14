@@ -99,19 +99,19 @@ var VectorWidget = React.createClass({
         onMouseDown={makeListener(this.handleMouseDown)}
         onMouseUp={makeListener(this.handleMouseUp)}>
         <Group x={210} y={135}>
-          <Shape fill="rgba(0,0,0,0.1)" d={BORDER_PATH} />
+          <Shape fill="rgba(0,0,0,0.1)" d={BORDER_PATH}/>
           <Shape fill="#7BC7BA" d={BG_PATH} />
           <Shape fill="#DCDCDC" d={BAR_PATH} />
-          <Shape fill="#D97B76" d={RED_DOT_PATH} />
-          <Shape fill="#DBBB79" d={YELLOW_DOT_PATH} />
-          <Shape fill="#A6BD8A" d={GREEN_DOT_PATH} />
+          <Shape fill="#D97B76" d={RED_DOT_PATH} shadow='#000' shadowBlur={5} shadowOffsetX={1} shadowOffsetY={1}/>
+          <Shape fill="#DBBB79" d={YELLOW_DOT_PATH} shadow='#000' shadowBlur={5} shadowOffsetX={1} shadowOffsetY={1}/>
+          <Shape fill="#A6BD8A" d={GREEN_DOT_PATH} shadow='#000' shadowBlur={5} shadowOffsetX={1} shadowOffsetY={1}/>
           <Group x={55} y={29}>
             <Group rotation={rotation} originX={84} originY={89}>
               <Shape fill="#FFFFFF" d={CENTER_DOT_PATH} />
               <Group>
-                <Shape d={RING_ONE_PATH} stroke="#FFFFFF" strokeWidth={8} />
-                <Shape d={RING_TWO_PATH} transform={RING_TWO_ROTATE} stroke="#FFFFFF" strokeWidth={8} />
-                <Shape d={RING_THREE_PATH} transform={RING_THREE_ROTATE} stroke="#FFFFFF" strokeWidth={8} />
+                <Shape d={RING_ONE_PATH} stroke="#FFFFFF" strokeWidth={8} shadow='red' shadowBlur={10} shadowOffsetX={1} shadowOffsetY={1}/>
+                <Shape d={RING_TWO_PATH} transform={RING_TWO_ROTATE} stroke="#FFFFFF" strokeWidth={8} shadow='blue' shadowBlur={10} shadowOffsetX={1} shadowOffsetY={1}/>
+                <Shape d={RING_THREE_PATH} transform={RING_THREE_ROTATE} stroke="#FFFFFF" strokeWidth={8} shadow='green' shadowBlur={10} shadowOffsetX={1} shadowOffsetY={1}/>
               </Group>
             </Group>
           </Group>
