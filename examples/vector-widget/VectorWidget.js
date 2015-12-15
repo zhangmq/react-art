@@ -109,9 +109,9 @@ var VectorWidget = React.createClass({
             <Group rotation={rotation} originX={84} originY={89}>
               <Shape fill="#FFFFFF" d={CENTER_DOT_PATH} />
               <Group>
-                <Shape d={RING_ONE_PATH} stroke="#FFFFFF" strokeWidth={8} shadow='red' shadowBlur={10} shadowOffsetX={1} shadowOffsetY={1}/>
-                <Shape d={RING_TWO_PATH} transform={RING_TWO_ROTATE} stroke="#FFFFFF" strokeWidth={8} shadow='blue' shadowBlur={10} shadowOffsetX={1} shadowOffsetY={1}/>
-                <Shape d={RING_THREE_PATH} transform={RING_THREE_ROTATE} stroke="#FFFFFF" strokeWidth={8} shadow='green' shadowBlur={10} shadowOffsetX={1} shadowOffsetY={1}/>
+                <Shape d={RING_ONE_PATH} stroke="#FFFFFF" strokeWidth={8} shadow='red' shadowBlur={10} shadowOffsetX={2} shadowOffsetY={10}/>
+                <Shape d={RING_TWO_PATH} transform={RING_TWO_ROTATE} stroke="#FFFFFF" strokeWidth={8} shadow='blue' shadowBlur={10} shadowOffsetX={10} shadowOffsetY={2}/>
+                <Shape d={RING_THREE_PATH} transform={RING_THREE_ROTATE} stroke="#FFFFFF" strokeWidth={8} shadow='green' shadowBlur={10} shadowOffsetX={10} shadowOffsetY={10}/>
               </Group>
             </Group>
           </Group>
